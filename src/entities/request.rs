@@ -12,6 +12,20 @@ pub struct Request<'buffer> {
 }
 
 impl<'buffer> Request<'buffer> {
+    pub fn path(&self) -> &str {
+        &self.path
+    }
+
+    pub fn query_string(&self) -> Option<&QueryString<'buffer>> {
+        self.query_string.as_ref()
+    }
+
+    pub fn method(&self) -> &Method {
+        &self.method
+    }
+}
+
+impl<'buffer> Request<'buffer> {
     fn get_next_value(request: &str) -> Option<(&str, &str)> {
         for (i, c) in request.chars().enumerate() {
             if c == ' ' || c == '\r' {
