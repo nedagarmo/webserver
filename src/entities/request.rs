@@ -2,7 +2,7 @@ use super::method::{ Method, MethodError};
 use std::error::Error;
 use std::fmt::{Debug, Display, Formatter, Result as FmtResult};
 use std::str::{from_utf8, Utf8Error};
-use crate::http::query_string::QueryString;
+use super::query_string::QueryString;
 
 #[derive(Debug)]
 pub struct Request<'buffer> {

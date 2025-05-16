@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::str::SplitN;
 
 #[derive(Debug)]
 pub struct QueryString<'buffer> {
