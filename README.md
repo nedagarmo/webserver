@@ -30,11 +30,16 @@ This is a basic HTTP web server built from scratch using **Rust**. It’s design
 ```text
 .
 ├── src/
+│   └── app/           # handlers and business logic
+│   └── entities/      # Entities like method, request, response, etc.
+│   └── traits/        # abstractions
 │   └── main.rs        # The entrypoint file
 ├── public/            # Static files (HTML, CSS, etc.)
 │   ├── index.html
 │   └── style.css
-└── README.md
+└── Cargo.lock
+└── Cargo.toml
+
 ```
 
 ---
